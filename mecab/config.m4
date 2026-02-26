@@ -90,9 +90,11 @@ if test "$PHP_MECAB" != "no"; then
   PHP_MECAB_PHP_VERNUM=`$PHP_CONFIG --vernum 2>/dev/null`
   AC_MSG_CHECKING([for PHP version])
   AC_MSG_RESULT([build for $PHP_MECAB_PHP_VERSION])
-  if test "$PHP_MECAB_PHP_VERNUM" -ge 70000; then
-    PHP_NEW_EXTENSION(mecab, mecab7.c , $ext_shared)
-  else
-    PHP_NEW_EXTENSION(mecab, mecab5.c , $ext_shared)
+
+  dnl Require PHP 8.0 or later
+  if test "$PHP_MECAB_PHP_VERNUM" -lt 80000; then
+    AC_MSG_ERROR([PHP 8.0 or later is required to compile php-mecab])
   fi
+
+  PHP_NEW_EXTENSION(mecab, mecab.c , $ext_shared)
 fi
