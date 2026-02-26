@@ -394,7 +394,7 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_mecab_node_construct, ZEND_SEND_BY_VAL, ZEND_RETU
 
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_mecab_node_getIterator, ZEND_SEND_BY_VAL, ZEND_RETURN_VALUE, 0)
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_mecab_node_getIterator, 0, 0, Traversable, 0)
 
 ZEND_END_ARG_INFO()
 
@@ -402,7 +402,7 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_mecab_node_toString, ZEND_SEND_BY_VAL, ZEND_RETUR
 
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_mecab_node___toString, ZEND_SEND_BY_VAL, ZEND_RETURN_VALUE, 0)
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_mecab_node___toString, 0, 0, IS_STRING, 0)
 
 ZEND_END_ARG_INFO()
 
@@ -510,23 +510,23 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_mecab_nodeIterator_construct, ZEND_SEND_BY_VAL, Z
 ZEND_END_ARG_INFO()
 
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_mecab_nodeIterator_current, ZEND_SEND_BY_VAL, ZEND_RETURN_VALUE, 0)
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_mecab_nodeIterator_current, 0, 0, IS_MIXED, 0)
 
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_mecab_nodeIterator_key, ZEND_SEND_BY_VAL, ZEND_RETURN_VALUE, 0)
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_mecab_nodeIterator_key, 0, 0, IS_MIXED, 0)
 
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_mecab_nodeIterator_next, ZEND_SEND_BY_VAL, ZEND_RETURN_VALUE, 0)
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_mecab_nodeIterator_next, 0, 0, IS_VOID, 0)
 
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_mecab_nodeIterator_rewind, ZEND_SEND_BY_VAL, ZEND_RETURN_VALUE, 0)
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_mecab_nodeIterator_rewind, 0, 0, IS_VOID, 0)
 
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_mecab_nodeIterator_valid, ZEND_SEND_BY_VAL, ZEND_RETURN_VALUE, 0)
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_mecab_nodeIterator_valid, 0, 0, _IS_BOOL, 0)
 
 ZEND_END_ARG_INFO()
 
