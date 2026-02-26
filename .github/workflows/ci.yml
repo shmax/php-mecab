@@ -50,5 +50,8 @@ jobs:
           cd mecab
           sudo make install
 
+      - name: Enable extension
+        run: echo "extension=mecab.so" | sudo tee -a $(php -r "echo php_ini_loaded_file();")
+
       - name: Verify installation
         run: php -m | grep mecab
